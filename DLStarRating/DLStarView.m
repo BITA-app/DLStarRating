@@ -64,7 +64,7 @@
 #pragma mark -
 #pragma mark Layouting
 
-- (void)centerIn:(CGRect)_frame with:(int)numberOfStars {
+- (void)centerIn:(CGRect)_frame with:(NSInteger)numberOfStars {
 	CGSize size = self.frame.size;
 	
 	float height = self.frame.size.height;

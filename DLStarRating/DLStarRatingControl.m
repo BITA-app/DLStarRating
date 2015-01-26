@@ -85,7 +85,7 @@
   }
 }
 
-- (void)setStar:(UIImage*)defaultStarImage highlightedStar:(UIImage*)highlightedStarImage atIndex:(int)index {
+- (void)setStar:(UIImage*)defaultStarImage highlightedStar:(UIImage*)highlightedStarImage atIndex:(NSInteger)index {
     DLStarView *selectedStar = (DLStarView*)[self subViewWithTag:index];
     
     // check if star exists
@@ -110,22 +110,22 @@
 	return nil;
 }
 
-- (void)disableStarsDownToExclusive:(int)idx {
-	for (int i=numberOfStars; i > idx; --i) {
+- (void)disableStarsDownToExclusive:(NSInteger)idx {
+	for (NSUInteger i=numberOfStars; i > idx; --i) {
 		UIButton *b = (UIButton*)[self subViewWithTag:i];
 		b.highlighted = NO;
 	}
 }
 
 - (void)disableStarsDownTo:(int)idx {
-	for (int i=numberOfStars; i >= idx; --i) {
+	for (NSUInteger i=numberOfStars; i >= idx; --i) {
 		UIButton *b = (UIButton*)[self subViewWithTag:i];
 		b.highlighted = NO;
 	}
 }
 
 
-- (void)enableStarsUpTo:(int)idx {
+- (void)enableStarsUpTo:(NSInteger)idx {
 	for (int i=0; i <= idx; i++) {
 		UIButton *b = (UIButton*)[self subViewWithTag:i];
 		b.highlighted = YES;
@@ -136,7 +136,7 @@
 	CGPoint point = [touch locationInView:self];	
 	UIButton *pressedButton = [self starForPoint:point];
 	if (pressedButton) {
-		int idx = pressedButton.tag;
+		NSInteger idx = pressedButton.tag;
 		if (pressedButton.highlighted) {
 			[self disableStarsDownToExclusive:idx];
 		} else {
@@ -156,7 +156,7 @@
 	
 	UIButton *pressedButton = [self starForPoint:point];
 	if (pressedButton) {
-		int idx = pressedButton.tag;
+		NSInteger idx = pressedButton.tag;
 		UIButton *currentButton = (UIButton*)[self subViewWithTag:currentIdx];
 		
 		if (idx < currentIdx) {

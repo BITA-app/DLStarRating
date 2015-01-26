@@ -18,8 +18,8 @@
 @protocol DLStarRatingDelegate;
 
 @interface DLStarRatingControl : UIControl {
-	int numberOfStars;
-	int currentIdx;
+	NSUInteger numberOfStars;
+	NSInteger currentIdx;
 	UIImage *star;
 	UIImage *highlightedStar;
 	IBOutlet id<DLStarRatingDelegate> delegate;
@@ -29,7 +29,7 @@
 - (id)initWithFrame:(CGRect)frame;
 - (id)initWithFrame:(CGRect)frame andStars:(NSUInteger)_numberOfStars isFractional:(BOOL)isFract;
 - (void)setStar:(UIImage*)defaultStarImage highlightedStar:(UIImage*)highlightedStarImage;
-- (void)setStar:(UIImage*)defaultStarImage highlightedStar:(UIImage*)highlightedStarImage atIndex:(int)index;
+- (void)setStar:(UIImage*)defaultStarImage highlightedStar:(UIImage*)highlightedStarImage atIndex:(NSInteger)index;
 
 @property (retain,nonatomic) UIImage *star;
 @property (retain,nonatomic) UIImage *highlightedStar;

@@ -19,7 +19,7 @@
 }
 
 - (id)initWithDefault:(UIImage*)star highlighted:(UIImage*)highlightedStar position:(int)index allowFractions:(BOOL)fractions;
-- (void)centerIn:(CGRect)_frame with:(int)numberOfStars;
+- (void)centerIn:(CGRect)_frame with:(NSInteger)numberOfStars;
 - (void)setStarImage:(UIImage*)starImage highlightedStarImage:(UIImage*)highlightedImage;
 - (UIImage *)croppedImage:(UIImage*)image;
 @end
