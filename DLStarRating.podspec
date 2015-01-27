@@ -128,9 +128,9 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
+    non_arc_files = 'DLStarRating/DLStarRatingControl.{h,m}'
     s.requires_arc = true
 
-    non_arc_files = 'DLStarRating/DLStarRatingControl.{h,m}'
     s.exclude_files = non_arc_files
     s.subspec 'no-arc' do |sna|
     sna.requires_arc = false
